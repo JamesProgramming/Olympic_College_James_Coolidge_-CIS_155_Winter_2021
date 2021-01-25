@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/* 
+CIS 155 - Web Development
+Auther: James Coolidge
+Date:   2021-01-22
+Project: V1
+
+CSS Typographic styles for website
+File: ww_index.html 
+*/
+
+/* Html and body styles */
+
+html {
+    background-color: #F5F4F4;
+}
+
+body {
+    color: #4A4949;
+    font-family: Cambria, serif;
+}
+
+/* h1 and h2 styles */
+
+h1 {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* body header style */
+
+body header nav {
+    background-color: #6A4D13;
+}
+
+body header ul {
+    list-style-type: none;
+    font-size: 1.8em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #F5F4F4; 
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: hsl(360, 10%, 10%); 
+}
+
+/* aside block */
+
+aside {
+    background-color: #AF9F8E;
+    color: #F5F4F4;
+}
+
+aside a:link {
+    color: #F5F4F4;
+}
+
+aside a:visited {
+    color: hsl(360, 10%, 25%);
+}
+
+aside a:hover {
+    color: hsl(360, 10%, 10%);
+}
+
+
