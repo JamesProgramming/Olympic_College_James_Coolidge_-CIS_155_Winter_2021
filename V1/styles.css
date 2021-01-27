@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* 
+CIS 155 - Web Development
+Author: James Coolidge
+Date:   2021-01-26
+Project: V1
+
+CSS Typographic styles for website
+File: styles.html 
+
+Cite: All hexadecimal colors were generated in XD Adobe
+*/
+
+/* Html and body styles */
+
+html {
+    background-color: #F5F4F4;
+}
+
+body {
+    color: #4A4949;
+    font-family: Cambria, serif;
+}
+
+/* h1 and h2 styles */
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 1.3em;
+}
+/* M2LO13 - This demonstrate how CSS can change presentation of textual elements */
+h2 {
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+/* base a */
+
+a:link {
+    color:#4A4949;
+}
+
+a:hover {
+    color: black;
+}
+/* M2LO14 - This uses progressive enhancement. Older browsers cannot read the hsl. 
+   Newer browsers can read hsl and since it is placed last, it will override the rgb color. */
+a:visited {
+    color: rgb(12, 12, 12);
+    color: hsl(360, 10%, 10%);
+}
+
+/* body header style */
+/* M2LO5 - The following two stlyes uses contextual selectors */
+body > header nav {
+    background-color: #6A4D13;
+}
+
+body > header ul {
+    list-style-type: none;
+    font-size: 1.8em;
+}
+
+/* header nav style*/
+
+/*M2LO5 - Second contextual selectors */
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: #F5F4F4; 
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    color: hsl(360, 10%, 10%); 
+}
+
+/* section header */
+
+/* M2LO3 - This style shows inheritance from the body style */
+section header p {
+    font-style: italic; 
+}
+
+/* classes and id*/
+
+/* M2LO6 - This style uses a class selector */
+section.wood p {
+    line-height: 0.5em;
+}
+/* M2LO6 - This stlye uses id selector */ 
+p#return a:visited {
+    color:#4A4949;
+}
+
+p#return a:hover {
+    color:black;
+}
+/* M2LO11 - This styles uses a pseudo-element selector */
+p#return a:hover::before {
+    content: "[ ";
+}
+
+p#return a:hover::after {
+    content: " ]";
+}
+
+/* aside block */
+
+/* M2LO3 - This demonstrate style precedence over the body and html style */
+aside {
+    background-color: #AF9F8E;
+    color: #F5F4F4;
+}
+
+aside a:link {
+    color: #F5F4F4;
+}
+
+/* M2LO15 - The following style applies color */
+aside a:visited {
+    color: rgb(220, 220, 220);
+    color: hsl(360, 5%, 83%);
+}
+
+aside a:hover {
+    color: rgb(12, 12, 12);
+    color: hsl(360, 10%, 10%);
+}
+
+/* external liks */
+
+/* M2LO7 - This demonstrates a CSS attribute selector other than class or id */ 
+a[href*="https"] {
+    font-style: italic;
+}
+
+/* footer*/
+
+/* M2LO12 - padding, in the following style, demonstrates 
+   how CSS can change presentation of page elements */
+footer {
+    background-color: #6A4D13;
+    color: #F5F4F4;
+    padding: 10px 5px;
+    text-align: center;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html><!-- M1LO6 - Demonstrates the use of the doctype HTML tag--> 
+<html>
+<head><!-- M1LO6 - Demonstrates the use of the head tag-->
+    <!-- M1LO6 - Demonstrates the use of HTML comment tag-->
+    <!--
+        CIS 155 - Web Development
+        Author: James Coolidge
+        Date:   2021-01-26
+        Project: V1
+        
+        This is the home page for the website.
+        File: index.html
+    -->
+    <meta charset="utf-8" /><!-- M1LO6 - Demonstrates the use of meta to set the charset to utf-8-->
+    <meta name="keywords" content="woodworking, wood, carpertry" />
+    <title>Home | Witty Woodworkers</title>
+    <link href="styles.css" rel="stylesheet" /><!--M1LO8 This demonstrates the use of external style sheets-->
+    <!-- M2LO4 - This shows the use of embedded styles-->
+    <style>
+    
+        section.on_image {
+         background-color: hsla(0, 0%, 100%, 0.5);
+        color: black;
+        }
+
+        section.on_image h1 {
+            font-weight: normal;
+        }
+
+        section.on_image ul {
+            font-size: 1.1em;
+        }
+        /* M2LO11 - Demonstrates the use of a pseudo-element selector by changing the first and last bullet type to a square*/
+        section.on_image ul li:first-of-type, section.on_image ul li:last-of-type {
+            list-style-type: square;
+        }
+
+        section.on_image ul li:nth-of-type(2) {
+            list-style-type: disc;
+        }
+
+    </style>
+</head>
+<body><!-- M1LO6 - Demonstrates the use of the body tag-->
+
+    <header>
+        <a href="index.html"><img src="logo.png" alt="logo" /></a>
+        <!--This image was made using Microsft Word-->
+        <nav>
+            <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="choosing_woods.html">Choosing Woods</a></li>
+                <li><a href="picking_tools.html">Picking Tools</a></li>
+                <li><a href="beginner_tips.html">Beginner Tips</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <header>
+            <img src="hero_image.jpg" alt="Witty Woodworkers" />
+            <section class="on_image"> 
+            </h1><!--M2LO4 - This demonstrates the use of inline styles.
+                             Inline styles take the highest precedence when it comes to style, 
+                             although it is preferred that all styles be created in a separate stylesheet for clarity-->           
+                <h1>Jumpstart to <em style="font-weight: bold;">woodworking...</em>
+                <ul>
+                    <li styles="">Find the right wood</li>
+                    <li>Get the right tools</li>
+                    <li>Learn a few tips</li>
+                </ul> 
+            </section>
+        </header>
+        <h1>Just beginning or interested in <em>woodworking?</em></h1>
+        <p>Starting a wood project can be daunting but with a touch of help 
+        and some advice, anyone can do a little woodworking just fine.</p>
+    
+        <h1><em>Woodworking</em> is a dying trade that awaits your arrival.</h1>  
+        <ol><!--M1LO7 - This demonstrates the use of an ordered list-->
+            <li>It’s a great hobby</li>
+            <li>It can output wonderful gifts</li>
+            <li>It lets you do your own repairs and remodels, saving you great sums of money.</li>  
+        </ol>
+    </section>
+
+    <aside>
+        <h1>Websites with DIY Projects</h1>
+        <!--M1LO13 - This demonstrates the use of external hyperlinks-->
+        <p><a href="https://www.homedit.com/wood-projects/">46 DIY Wood Projects For  Beginners</a></p>
+        <p><a href="https://www.familyhandyman.com/list/woodworking-gifts-beginners-can-make/">21 Woodworking Gifts Beginners Can Make</a></p>
+    </aside>
+
+    <footer>
+        James Coolidge | CIS 155 - Web Development | 2021 &copy;
+    </footer>
+
+</body>
+</html>
