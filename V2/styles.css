@@ -448,7 +448,7 @@ aside.column30#about {
     height: 200em;
 }
 
-#about_comments {
+div.about_comments {
     clear: both;
     float: left;
     padding-top: 10%;
