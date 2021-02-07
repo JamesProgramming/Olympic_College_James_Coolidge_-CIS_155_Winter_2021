@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <!--
+        CIS 155 - Web Development
+        Author: James Coolidge
+        Date:   2021-02-6
+        Project: V2
+        
+        This is the about page for the website.
+        File: about.html
+    -->
+    <meta charset="utf-8" />
+    <title>About | Witty Woodworkers</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="fixed_nav">
+        <nav id="fixed_nav">
+            <a href="index.html"><div>Home</div></a>
+            <a href="choosing_woods.html"><div class="Choosing ">Woods</div></a>
+            <a href="picking_tools.html"><div class="Picking ">Tools</div></a>
+            <a href="beginner_tips.html"><div class="Beginner ">Tips</div></a>
+            <a href="about.html"><div>About</div></a>
+        </nav>
+    </div>
+    <header>
+        <div class="main_body">
+            <img src="logo.png" alt="logo" usemap="#link_logo"/>
+            <map name="link_logo">
+                <area shape="poly" coords="5,5,5,70,380,70,380,5" href="index.html" alt="logo"/>
+            </map>
+            <!--This image was made using Microsft Word-->
+        </div>
+        <div id="main_nav">
+            <div class="main_body">
+                <nav>
+                    <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="choosing_woods.html">Choosing Woods</a></li>
+                        <li><a href="picking_tools.html">Picking Tools</a></li>
+                        <li><a href="beginner_tips.html">Beginner Tips</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main_body">
+        <div class="column70">
+            <section>
+                <div class="column70">
+                    <h1>I am James Coolidge</h1>
+                    <p>I have been doing woodworking for about 6 year and, like you, I am still 
+                    learning new trick and techniques to make the finished products even better.</p>
+                </div>
+                <!-- M4LO1 - This demonstrates the use of figure boxes.
+                                These are used to hold images.-->
+                <figure>                
+                    <img src="stool.jpg" alt="stool" />
+                </figure>
+                <div class="column30"></div>
+                <figure>
+                    <img src="pens.jpg" alt="pens"/><!-- M1LO9 - This demonstrates the use of an inline image-->
+                </figure>
+                <div class="column70" id="below_absolute">
+                    <p><strong>Above</strong> is a stool I made out of mahogany and birch and <strong>to the left</strong> are 
+                    two pens I made out of mahogany and purple heart.</p>
+                </div>
+            </section>
+        </div>
+        <aside class="column30" id="about"></aside>
+    </div>
+    <footer>
+        <!--M1LO10 - This demonstrates the use of special characters from extended character sets.
+                     Character sets allow you to add character such as copyright, trademark, 
+                     and many more symbols that are not on the keyboard-->
+        James Coolidge | CIS 155 - Web Development | 2021 &copy;
+    </footer>
+
+</body>
+</html>

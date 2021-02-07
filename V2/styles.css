@@ -1,0 +1,519 @@
+@charset "utf-8";
+
+/* 
+CIS 155 - Web Development
+Author: James Coolidge
+Date:   2021-02-6
+Project: V2
+
+CSS Typographic styles for website
+File: styles.html 
+
+Cite: All hexadecimal colors were generated in XD Adobe
+*/
+
+/* Html and body styles */
+
+html {
+    background: linear-gradient(to bottom right, #F5F4F4 85%, #AF9F8E);
+}
+
+body {
+    color: #363636;
+    font-family: Cambria, serif;
+}
+
+/* h1 and h2 styles */
+
+h1 {
+    font-size: 1.9em;
+    font-weight: bold;
+    text-shadow: rgba(85, 85, 85, 0.8) 2px 2px 3px;
+}
+/* M2LO13 - This demonstrate how CSS can change presentation of textual elements */
+/* M4LO5 - This demonstrates the use of text shadowing. This style adds a greyish shadow 2 pixels below
+            and to the right of the text with blur of 3 pixels. */
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: rgba(85, 85, 85, 0.8) 2px 2px 3px;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* base a */
+
+a:link {
+    color:#363636;
+}
+
+/* M2LO14 - This uses progressive enhancement. Older browsers cannot read the hsl. 
+   Newer browsers can read hsl and since it is placed last, it will override the rgb color. */
+   a:visited {
+    color: rgb(130, 130, 130);
+    color: hsl(360, 10%, 70%);
+}
+
+a:hover {
+    color: black;
+}
+
+
+/* body header style */
+/* M2LO5 - The following style uses contextual selectors */
+
+body > header ul {
+    list-style-type: none;
+    font-size: 1.5em;
+}
+
+/* header nav style*/
+
+/*M2LO5 - Second contextual selectors */
+nav a:link, nav a:visited {
+    text-decoration: none;
+    color: #F5F4F4; 
+}
+
+body > header > div > div > nav > ul > li a:hover {
+    background-color: #3E2F10;
+    border-width: 0px;
+
+}
+/* M4LO4 - This demonstrates the use of gradients.
+            This one changes the color to a white as the navigation div goes to both
+            sides of the screen. */
+div#main_nav {
+    background-color: #6A4D13;
+    background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
+}
+
+/* section header */
+
+/* M2LO3 - This style shows inheritance from the body style */
+section header p {
+    font-style: italic; 
+}
+
+/* "return to top" on choosing_woods page */
+/* M3LO3 - This demonstrates the use of a clearing float. 
+            Clearing floats position a float on the screen below 
+            the last float on either the left, right, or 
+            both sides. In this case, the p will be floated below 
+            the last float on both sides. */
+
+p#return {
+    clear: both;
+    text-align: center;
+    padding-top: 12%;
+}
+
+/* M2LO6 - This stlye uses id selector */ 
+p#return a:visited {
+    color:#363636;
+}
+
+p#return a:hover {
+    color:black;
+}
+/* M2LO11 - This styles uses a pseudo-element selector */
+p#return a:hover::before {
+    content: "[ ";
+}
+
+p#return a:hover::after {
+    content: " ]";
+}
+
+
+/* aside block */
+
+/* M2LO3 - This demonstrate style precedence over the body and html style */
+aside {
+    background-color: #9F8A73;
+    color: #F5F4F4;
+}
+
+aside a:link {
+    color: white;
+}
+
+/* M2LO15 - The following style applies color */
+aside a:visited {
+    color: rgb(220, 220, 220);
+    color: hsl(360, 5%, 83%);
+}
+
+aside a:hover {
+    color: rgb(12, 12, 12);
+    color: hsl(360, 10%, 10%);
+}
+
+/* external liks */
+
+/* M2LO7 - This demonstrates a CSS attribute selector other than class or id */ 
+a[href*="https"] {
+    font-style: italic;
+}
+
+/* footer*/
+
+/* M2LO12 - padding, in the following style, demonstrates 
+   how CSS can change presentation of page elements */
+footer {
+    background-color: #6A4D13;
+    color: #F5F4F4;
+    text-align: center;
+}
+
+
+
+/* set all element to a default */
+/* M3LO1 -this reset all the CSS styles to a new default. */
+html, body, div, section, aside, footer, figure, nav,  
+h1, h2, h3 , h4 , h5, h6, header,
+img, a, p, ol, ul, li {
+    margin: 0px;
+    padding: 0px;
+    line-height: 2em;
+    box-sizing: border-box;
+}
+
+/* Body and image styles for positioning and size*/
+
+div.main_body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    min-width: 850px;
+    width: 93%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* fixed nav */
+/* M3LO9 - This demonstrates the use of fixed positioning.
+            This places the element at a fix point on the page so 
+            regardless of whether you scroll down or up the 
+            page, it will always appear on the same position on the screen. */
+div.fixed_nav {
+    margin: 0%;
+    position: fixed;
+    top: 17%;
+    left: 0%;
+    width: 8.7vw;
+}
+
+div.fixed_nav div {
+    display: block;
+    clear: both;
+    float: left;
+    margin-top: 5%;
+    opacity: 0.47;
+    background: #6A4D13;
+    padding-right: 7%;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+}
+
+div.fixed_nav div:hover {
+    opacity: 1;
+    background: #3E2F10;
+    width: 100%;
+    text-align: right;
+    font-size: 1.07em;
+}
+
+div.fixed_nav div:hover::before {
+    content: attr(class);
+}
+
+/* page logo */
+/* M3LO11 - This demonstrates the use of -prefix- style browser extensions.
+            Since filter were originally create as a browser extension, it a 
+            good idea to include the -webkit- extension just in case the browser needs it */
+body > header > div > img {
+    margin-top: 1em;
+    -webkit-filter:drop-shadow(10px 10px 10px hsl(30, 50%, 20%));
+    filter:drop-shadow(10px 10px 10px hsl(30, 50%, 20%));
+    width: 33%;
+}
+
+/* main nav postioning */
+
+div#main_nav {
+    width: 100%;
+    
+}
+
+body > header > div > div > nav > ul > li > a {
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-style: solid;
+    border-bottom-style: none;
+    border-color: #6A4D13 #F5F4F4;
+    border-width: 1px;
+}
+
+/* M2LO5 - The following style uses contextual selectors */
+body > header > div > div > nav > ul::after {
+    clear: both;
+    content: "";
+    display: table;
+
+}
+/* M2LO11 - Demonstrates the use of a pseudo-element selector 
+by removing the border from the left side of the first element in the list*/
+nav ul li:first-of-type a {
+    border-left-style: none;
+}
+
+nav ul li:last-of-type a {
+    border-right-style: none;
+} 
+
+/* home page hero image */
+/* M4LO2 - This demonstrate the use of background images */
+section.image {
+    background-image: url(hero_image.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 500px;
+    display: block;
+    clear: left;
+}
+
+section.image::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* text on home page hero image */
+
+/* M3LO2 - This style floats the text on top of the hero image. 
+            If the text was not floated, its background would
+            span the whole image.*/
+div.image_text_float {
+    color: black;
+    background: hsla(1, 5%, 90%, 0.3);
+    display: block;
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding: 1% 2%;
+}
+/* M2LO6 - This style uses a class selector */
+/* M4LO5 - This demonstrates the use of text shadowing.
+            This text will have two shadows: a white shadow two pixel to 
+            the right and below, and a white shadow one pixel below and to the right. */
+div.image_text h2 {
+    text-shadow:white 2px 2px 5px,
+                  white 1px 1px 3px;
+}
+
+div.image_text {
+    text-shadow:white 2px 2px 5px,
+                  white 1px 1px 3px;
+}
+
+/* li indeting*/
+
+section li {
+    list-style-position: inside;
+    text-indent: 0%;
+}
+
+/* main grid style*/
+/* M3LO6 - This demonstrates the formatting a grid. 
+            Everything placed within the grid classes will
+            have a width corresponding to their name. i.e., class 'column70' will 
+            have width of 70%. */
+div.column70 {
+    display: block;
+    float: left;
+    width: 70%;
+    margin-top: 5%;
+    padding-right: 3%;
+}
+
+div.column30 {
+    display: block;
+    float: left;
+    width: 30%;
+}
+/* M3LO2 - This style floats the aside element to the left of the previous 
+            floating element if its’ width is less than or equal to 70%*/
+aside.column30 {
+    display: block;
+    float: left;
+    width: 30%;
+    margin-top: 5%;
+}
+
+/* grid styles. rgba value created by VS code color selector */
+
+div.column70 h1 {
+    padding-top: 5%;
+}
+
+div.column70 h3 {
+    padding-top: 2%;
+}
+/* M3LO8B - This - demonstrates the use of relative positioning.
+            This moves the element with relation to where it is already positioned 
+            on the page. */
+div.column70 p,  div.column70 ul{
+    position: relative;
+    top: -0.2em;
+}
+
+div.column70 hr {
+    margin-top: 3%;
+}
+
+/*  grid modification for home page */
+
+aside.column30#home {
+    margin-top: 0%;
+    height: 450px;
+}
+
+div.column70#home_text {
+    margin-top: 0%;
+}
+
+div.home_page_bottom {
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+/* grid modification for picking_tools page */
+aside.column30#picking_tools {
+    height: 150em;
+    padding-top: 47.5%;
+}
+
+/* grid modification for choosing_woods page */
+
+aside.column30#choosing_woods {
+    height: 304em;
+    padding-top: 51.5%;
+}
+
+div.column30 img ~ p {
+    font-size: 12px;
+}
+
+/* wood images positioning on choosing_wood page*/
+
+section.wood img {
+    height: 200px;
+    margin-top: 30%;
+    border: 2px solid #6A4D13;
+}
+    
+/* grid modification for beginner_tips page */
+
+aside.column30#beginner_tips {
+    height: 87.8em;
+}
+
+/*image for beginner_tips page*/
+
+/* M4LO6 - This demonstrates the use of opacity for images.
+        The image will appear less viable the lower the number.*/
+img[alt^="Hammer"] {
+    opacity: 0.9;
+}
+/* M3LO10 - This demonstrates the use of an overflow setting.
+            In this case, if the content in the element that exceeds the fixed height of the element,
+            the content is put in a scroll box. */
+div.scroll_content {
+    height: 38em;
+    overflow: auto;
+}
+
+/* grid modification for about page */
+
+aside.column30#about {
+    height: 50em;
+}
+
+/*image positioning for about page*/
+
+/* M4LO8 - This demonstrates the use of transformations for 2D images.
+            The image is rotated 10 degrees to the right. */
+div.column70 figure {
+    float: left;
+    width: 30%;
+    margin-top: 5%;
+    transform: rotate(10deg);
+}
+/* M4LO8 - This demonstrates the use of transformations for 2D images.
+            The image is rotated 10 degrees to the left. */
+div.column70 figure:last-of-type {
+    clear: left;
+    transform: rotate(-10deg); 
+}
+/* M3LO8A - This demonstrates the use of absolute positioning.
+            This positions the element in with relation to the sides of the screen.
+            This type of positioning can be problematic since its’ position on the screen will
+            not move proportionally with the rest of the screen's content
+            on smaller or bigger monitors. */
+div.column70 figure:first-of-type {
+    position: absolute;
+    top: 113px;
+    right: 32.1%;
+    width: 300px;
+}
+
+div#below_absolute {
+    margin-top: 11.5%;
+    padding-left: 5%;
+}
+
+/* aside content for all pages */
+
+/* M4LO3 - This demonstrates the use of rounded corners for borders.
+            The style below places a round corner on all the corners of the aside div */
+div.aside_content {
+    display: block;
+    margin: 7% 3% 3%;
+    padding: 3% 3% 20% 3%;
+    background-color:#82704C;
+    border-radius: 5%;
+}
+
+div.aside_content h1 {
+    font-size: 1.3em;
+    text-align: center;
+}
+
+div.aside_content p {
+    text-align: left;
+    padding-left: 5%;
+    padding-bottom: 3.5%;
+}
+
+
+/* footer positioning */
+
+div#footer {
+    padding: 0%;
+}
+
+footer {
+    clear: both;
+    padding: 0.5%;
+    background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
+}
