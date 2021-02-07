@@ -81,7 +81,6 @@ nav a:link, nav a:visited {
 body > header > div > div > nav > ul > li a:hover {
     background-color: #3E2F10;
     border-width: 0px;
-
 }
 /* M4LO4 - This demonstrates the use of gradients.
             This one changes the color to a white as the navigation div goes to both
@@ -446,9 +445,14 @@ div.scroll_content {
 /* grid modification for about page */
 
 aside.column30#about {
-    height: 50em;
+    height: 200em;
 }
 
+div#about_comments {
+    clear: both;
+    float: left;
+    padding-top: 10%;
+}
 /*image positioning for about page*/
 
 /* M4LO8 - This demonstrates the use of transformations for 2D images.
