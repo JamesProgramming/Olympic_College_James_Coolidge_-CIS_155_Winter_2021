@@ -90,7 +90,6 @@ body > header > div > a > img:hover {
 div.main_body {
     margin-left: auto;
     margin-right: auto;
-    min-width: 900px;
     max-width: 1200px;
     width: 95%;
     display: flex;
@@ -109,6 +108,16 @@ body > header > nav {
     background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
 }
 
+/* hamburger drop-down for phones and tablets */
+div#hamburger div {
+    display: none;
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    margin: 7px;
+}
+
+/* navigation for desktop */
 body > header > nav > div > ul {
     padding-top: 2px;
     padding-bottom: 2px;
@@ -268,3 +277,67 @@ footer {
     text-align: center;
 }
 
+/* media resize for ipad */
+
+@media screen and (max-width: 900px) {
+    div.main_body {
+        width: 100%;
+    }
+
+    body > header > nav > div > ul {
+        display: none;
+        width: 20%;
+        margin-top: 1px;
+        box-shadow: -2px 2px 3px black;
+    }
+    
+    body > header > nav > div > ul > li > a {
+        width: 100%;
+        text-align: left;
+        border: none;
+        padding: 3%;
+        font-size: 20px;
+    }
+
+    body > header > nav > div > ul > li#current_page a {
+        background-color: #F5F4F4;
+        border-radius: 0px;
+        color: #3E2F10;
+        border-width: 0px;
+        box-shadow: 0px 0px 5px hsla(1, 100%, 1%, 0.7);
+        filter: none;
+    }
+    
+    body > header > nav > div.main_body {
+        position: relative;
+        display: block;
+    }
+
+    div#hamburger div {
+        display: block; 
+        width: 33px;
+    }
+
+    div#hamburger {
+        margin: 2px;
+        float: right;
+    }
+
+    div#hamburger:hover {
+        background-color: hsl(1, 0%, 50%);
+        box-shadow: 1px 1px 2px black,
+                    -1px -1px 2px black;
+        border-radius: 7px;
+    }
+
+    div#hamburger:hover+ul, nav > div > ul:hover {
+        display: block;
+        position: absolute;
+        top:42px;
+        right: 0px; 
+        z-index: 1;
+        background-color: #6A4D13;
+
+
+    }
+}
