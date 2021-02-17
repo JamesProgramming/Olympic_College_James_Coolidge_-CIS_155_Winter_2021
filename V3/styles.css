@@ -194,6 +194,10 @@ div.main_body > header > img {
     width: 100%;
 }
 
+div.main_body > header > img[alt~="phone"] {
+    display: none;
+}
+
 /* Text on hero image */
 div#on_image_text {
     position: absolute;
@@ -229,25 +233,30 @@ div.flex_container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
+    
 }
 
-
-div.flex_box {
+div.flex_box_left {
     margin-right: 5%;
     flex: 1 1 520px;
+    min-width: 69%;
+    border: 1px solid blue;
+    padding-bottom: 5em;
 }
 
-div.flex_30 {
+div.flex_aside {
     flex: 1 1 10px;
-    min-width: 270px;
+    min-width: 290px;
 }
 
 /* aside element */
 aside {
     background-color: #9F8A73;
+    color: #F5F4F4;
     height: 400px;
     padding: 7% 3% 3%;
-    box-shadow: 0px -50px 0px #9F8A73;
+    box-shadow: 0px -12px 0px #9F8A73;
 }
 
 div.aside_text {
@@ -280,10 +289,19 @@ footer {
 /* media resize for ipad */
 
 @media screen and (max-width: 900px) {
+
+    /* main body width set to 100% of page */
     div.main_body {
         width: 100%;
     }
 
+    /* flex_box_left padding right removed */
+    div.flex_box_left {
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+
+    /* nav bar display change */
     body > header > nav > div > ul {
         display: none;
         width: 20%;
@@ -313,6 +331,7 @@ footer {
         display: block;
     }
 
+    /* humburger shape placed on nav bar */
     div#hamburger div {
         display: block; 
         width: 33px;
@@ -337,7 +356,16 @@ footer {
         right: 0px; 
         z-index: 1;
         background-color: #6A4D13;
+    }
+}
 
+@media screen and (max-width: 700px) {
 
+    div.main_body > header > img[alt~="desktop"] {
+        display: none;
+    }
+
+    div.main_body > header > img[alt~="phone"] {
+        display: flex;
     }
 }
