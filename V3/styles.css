@@ -25,19 +25,21 @@ body {
 
 /* h1 and h2 styles */
 
-h1 {
+body h1 {
     font-size: 1.9em;
     font-weight: bold;
+    margin-top: 1.3em;
     text-shadow: rgba(85, 85, 85, 0.8) 2px 2px 3px;
 }
 
-h2 {
+body h2 {
     font-size: 1.5em;
     font-weight: bold;
+    margin-top: 1.3em;
     text-shadow: rgba(85, 85, 85, 0.8) 2px 2px 3px;
 }
 
-h3 {
+body h3 {
     font-size: 1.3em;
     font-weight: bold;
 }
@@ -67,8 +69,13 @@ img, a, p, ol, ul, li span {
     box-sizing: border-box;
 }
 
-ul, ol {
+ul {
     list-style-type: none;
+}
+
+ol {
+    list-style: inside;
+    list-style-type: decimal;
 }
 
 /* logo image */
@@ -184,8 +191,7 @@ body > header > nav > div > ul > li#current_page a {
                 0px -2px 5px hsla(1, 100%, 1%, 0.7),
                 2px 0px 5px hsla(1, 100%, 1%, 0.7),
                 -2px 0px 5px hsla(1, 100%, 1%, 0.7);
-    filter: drop-shadow(0px -2px 5px hsla(1, 100%, 1%, 0.5));
-    
+    filter: drop-shadow(0px -2px 5px hsla(1, 100%, 1%, 0.5)); 
 }
 
 /* hero image */
@@ -203,16 +209,16 @@ div#on_image_text {
     position: absolute;
     top: 3%;
     left: 1.5%;
-    color: black;
-    background: hsla(1, 5%, 90%, 0.3);
+    color: #F5F4F4;
+    background: linear-gradient(to right bottom, hsla(1, 1%, 1%, 0.5) 30%, hsla(1, 1%, 1%, 0.1) 80%);
     padding: 1% 2%;
 }
 
 div#on_image_text h2 {
+    margin-top: 0px;
     font-weight: normal;
     font-size: 1.7em;
-    text-shadow:white 2px 2px 5px,
-                white 1px 1px 3px;
+    text-shadow: black 2px 2px 4px;
 }
 
 div#on_image_text ul {
@@ -223,8 +229,7 @@ div#on_image_text ul {
 
 div#on_image_text ul li {
     line-height: 1.5em;
-    text-shadow:white 2px 2px 5px,
-                  white 1px 1px 3px;
+    text-shadow: black 2px 2px 4px;
 }
     
 /* flex positioning on page */
@@ -233,16 +238,12 @@ div.flex_container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
-    
 }
 
 div.flex_box_left {
-    margin-right: 5%;
-    flex: 1 1 520px;
-    min-width: 69%;
-    border: 1px solid blue;
-    padding-bottom: 5em;
+    padding-right: 2%;
+    flex: 2 1 320px;
+    padding-bottom: 0em;
 }
 
 div.flex_aside {
@@ -258,7 +259,7 @@ div.main_body > header {
 aside {
     background-color: #9F8A73;
     color: #F5F4F4;
-    height: 400px;
+    height: 421px;
     padding: 7% 3% 3%;
 }
 
@@ -291,7 +292,7 @@ footer {
 
 /* media resize for ipad */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 
     /* main body width set to 100% of page */
     div.main_body {
@@ -300,7 +301,8 @@ footer {
 
     /* flex_box_left padding right removed */
     div.flex_box_left {
-        padding-right: 0px;
+        padding-right: 5px;
+        padding-left: 5px;
         margin-right: 0px;
     }
 
@@ -334,6 +336,18 @@ footer {
         display: block;
     }
 
+    /* Page name displayed of tablet and phone */
+
+    body > header > nav > div > p::before {
+        content: attr(id);
+        line-height: 0px;
+        color:  #F5F4F4;
+        font-size: 27px;
+        position: relative;
+        top: 10px;
+        left: 5%;
+    }
+
     /* humburger shape placed on nav bar */
     div#hamburger div {
         display: block; 
@@ -360,20 +374,75 @@ footer {
         z-index: 1;
         background-color: #6A4D13;
     }
+
+    aside {
+        display: flex;
+        margin-bottom: 10px;
+        height: 250px;
+        align-content: center;
+        justify-content: center;
+        padding-top: 0px;
+        margin-top: 5%;
+    }
+
+    div.aside_text {
+        background-color: transparent;
+    }
+
+    div.aside_text p {
+        text-align: center;
+        padding: 7px 0px;
+    }
+
+    div.aside_text h1 {
+        margin: 0px;
+    }
+
+    div.aside_text p a {
+        background-color: #6A4D13;
+        display: block;
+        padding: 2px;
+        border-radius: 20px;
+        width: 16em;
+        text-decoration: none;
+        color: white;
+        box-shadow: black 1px 2px 5px,
+                    black 1px 1px 5px;
+
+    }
+
+    div.flex_container {
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width: 700px) {
 
+    /* desktop hero image removed */
     div.main_body > header > img[alt~="desktop"] {
         display: none;
     }
 
+    /* phone hero image displayed */
     div.main_body > header > img[alt~="phone"] {
         display: flex;
-        width: 100%;
     }
 
     div.main_body > header {
         margin-bottom: 0px;
+    }
+
+    div#on_image_text h2, div#on_image_text ul li {
+        color: white;
+        text-shadow: black 2px 2px 4px;
+    }
+
+    div#on_image_text {
+        background: linear-gradient(to right, hsla(1, 1%, 1%, 0.5) 30%, hsla(1, 1%, 1%, 0.1) 80%);
+    }
+
+    h2 {
+        background-color: hsl;
     }
 }
