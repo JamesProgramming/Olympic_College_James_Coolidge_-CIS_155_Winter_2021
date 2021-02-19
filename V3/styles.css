@@ -534,6 +534,10 @@ footer {
 
     /* aside modification for tablet and phone */
 
+    aside {
+        justify-content: center;
+    }
+
     div.aside_text, div.aside_text#choosing_woods_aside, 
     div.aside_text#picking_tools_aside {
         display: flex;
@@ -551,8 +555,6 @@ footer {
     div.aside_text p {
         text-align: center;
         padding: 7px 0px;
-        align-content: center;
-        justify-content: center;
     }
 
     div.aside_text h1 {
