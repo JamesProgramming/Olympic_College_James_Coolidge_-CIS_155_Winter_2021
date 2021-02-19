@@ -13,77 +13,77 @@
     <meta charset="utf-8" />
     <title>Beginner Tips | Witty Woodworkers</title>
     <link href="styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <div class="fixed_nav">
-        <nav id="fixed_nav">
-            <a href="index.html"><div>Home</div></a>
-            <a href="choosing_woods.html"><div class="Choosing ">Woods</div></a>
-            <a href="picking_tools.html"><div class="Picking ">Tools</div></a>
-            <a href="beginner_tips.html"><div class="Beginner ">Tips</div></a>
-            <a href="about.html"><div>About</div></a>
-        </nav>
-    </div>
     <header>
         <div class="main_body">
-            <img src="logo.png" alt="logo" usemap="#link_logo"/>
-            <map name="link_logo">
-                <area shape="poly" coords="5,5,5,70,380,70,380,5" href="index.html" alt="logo"/>
-            </map>
-            <!--This image was made using Microsft Word-->
+            <a href="index.html"><img src="logo.png" alt="logo" /></a>
         </div>
-        <div id="main_nav">
+        <nav>
             <div class="main_body">
-                <nav>
-                    <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="choosing_woods.html">Choosing Woods</a></li>
-                        <li><a href="picking_tools.html">Picking Tools</a></li>
-                        <li><a href="beginner_tips.html">Beginner Tips</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </nav>
+                <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
+                    <li><a href="index.html" id="Home">Home</a></li>
+                    <li><a href="choosing_woods.html" id="Choosing Woods">Choosing Woods</a></li>
+                    <li><a href="picking_tools.html" id="Picking Tools">Picking Tools</a></li>
+                    <li id="current_page"><a href="beginner_tips.html" id="Beginner Tips">Beginner Tips</a></li>
+                    <li><a href="about.html" id="About">About</a></li>
+                </ul>
+                <p id="Beginner Tips"></p>
             </div>
-        </div>
+        </nav>
     </header>
     <div class="main_body">
-        <div class="column70">
-            <section>
-            <header>
-                <img src="beginner_image.jpg" alt="Hammer" />
-                <p>Image by <a href="https://pixabay.com/users/grieslightnin-3193937/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1629587">Andy Gries</a> 
-                    from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1629587">Pixabay</a></p>
-            </header>
-            <div class="scroll_content">
-                <h1>Sand Everything Smooth</h1>
-                <p>Varnish and paint doesn't cover up rough surfaces. 
-                    It actually makes them more apparent. Sanding surfaces 
-                    smooth is one of most important elements to making professional woodwork.</p>
-                
-                        
-                <h1>Laminate Woods with Alike Hardness</h1>
-                <p>Woods with different hardness require different 
-                    levels of sandpaper grit to be smoothed out. When you come sand your wooden creation, 
-                    the softer wood will remove faster than the hard one making an wave pattern with the softer wood lower the harder wood.</p>
-                
-                
-                <h1>Clap Your Wood Tight</h1>
-                <p>The strength of the bond depends on how much force is placed on keep the wood together while it's gluing.</p>
-                
-                
-                <h1>Wood Glue and Varnish Don't Bond</h1>
-                <p>You must make sure that there is no varnish on the wood you are gluing. 
-                    If you use a board that has varnish on it, sand it until the varnish is thoroughly gone.</p>
-                
-                
-                <h1>Save the Sawdust</h1>
-                <p>When you're doing a wood project, save some of the sawdust for each of the woods you used. 
-                    This makes great putty since it is the exact same color as the wood you're using. All you need to do is 
-                    mix it with some clear glue and fill in the cracks.</p>
+        <div class="nav_line"></div>
+        <div class="flex_container">
+            <div class="flex_70_container">
+                    <header>
+                        <img src="beginner_image.jpg" alt="Hammer" />
+                        <p>Image by <a href="https://pixabay.com/users/grieslightnin-3193937/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1629587">Andy Gries</a> 
+                            from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1629587">Pixabay</a></p>
+                    </header>
+                <div class="flex_100">
+                    <h1>Sand Everything Smooth</h1>
+                    <p>Varnish and paint doesn't cover up rough surfaces. 
+                        It actually makes them more apparent. Sanding surfaces 
+                        smooth is one of most important elements to making professional woodwork.</p>
+                </div>
+                <hr />
+                <div class="flex_100">      
+                    <h1>Laminate Woods with Alike Hardness</h1>
+                    <p>Woods with different hardness require different 
+                        levels of sandpaper grit to be smoothed out. When you come sand your wooden creation, 
+                        the softer wood will remove faster than the hard one making an wave pattern with the softer wood lower the harder wood.</p>
+                </div>
+                <hr />
+                <div class="flex_100">
+                    <h1>Clap Your Wood Tight</h1>
+                    <p>The strength of the bond depends on how much force is placed on keep the wood together while it's gluing.</p>
+                </div>
+                <hr />
+                <div class="flex_100">    
+                    <h1>Wood Glue and Varnish Don't Bond</h1>
+                    <p>You must make sure that there is no varnish on the wood you are gluing. 
+                        If you use a board that has varnish on it, sand it until the varnish is thoroughly gone.</p>
+                </div>
+                <hr />
+                <div class="flex_100">    
+                    <h1>Save the Sawdust</h1>
+                    <p>When you're doing a wood project, save some of the sawdust for each of the woods you used. 
+                        This makes great putty since it is the exact same color as the wood you're using. All you need to do is 
+                        mix it with some clear glue and fill in the cracks.</p>
+                </div>
             </div>
-            </section>
+            <div class="flex_aside" id="aside_disappear">
+                <aside>
+                </aside>
+            </div>
         </div>
-        <aside class="column30" id="beginner_tips"></aside>
     </div>
     <footer>
         James Coolidge | CIS 155 - Web Development | 2021 &copy;

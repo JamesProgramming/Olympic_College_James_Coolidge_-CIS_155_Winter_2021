@@ -13,47 +13,41 @@
     <meta charset="utf-8" />
     <title>Picking Tools | Witty Woodworkers</title>
     <link href="styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <div class="fixed_nav">
-        <nav id="fixed_nav">
-            <a href="index.html"><div>Home</div></a>
-            <a href="choosing_woods.html"><div class="Choosing ">Woods</div></a>
-            <a href="picking_tools.html"><div class="Picking ">Tools</div></a>
-            <a href="beginner_tips.html"><div class="Beginner ">Tips</div></a>
-            <a href="about.html"><div>About</div></a>
-        </nav>
-    </div>
     <header>
         <div class="main_body">
-            <img src="logo.png" alt="logo" usemap="#link_logo"/>
-            <map name="link_logo">
-                <area shape="poly" coords="5,5,5,70,380,70,380,5" href="index.html" alt="logo"/>
-            </map>
-            <!--This image was made using Microsft Word-->
+            <a href="index.html"><img src="logo.png" alt="logo" /></a>
         </div>
-        <div id="main_nav">
+        <nav>
             <div class="main_body">
-                <nav>
-                    <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="choosing_woods.html">Choosing Woods</a></li>
-                        <li><a href="picking_tools.html">Picking Tools</a></li>
-                        <li><a href="beginner_tips.html">Beginner Tips</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>
-                </nav>
+                <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
+                    <li><a href="index.html" id="Home">Home</a></li>
+                    <li><a href="choosing_woods.html" id="Choosing Woods">Choosing Woods</a></li>
+                    <li id="current_page"><a href="picking_tools.html" id="Picking Tools">Picking Tools</a></li>
+                    <li><a href="beginner_tips.html" id="Beginner Tips">Beginner Tips</a></li>
+                    <li><a href="about.html" id="About">About</a></li>
+                </ul>
+                <p id="Picking Tools"></p>
             </div>
-        </div>
+        </nav>
     </header>
 
     <div class="main_body">
-        <div class="column70">
-            <section>
+        <div class="nav_line"></div>
+        <div class="flex_container">
+            <div class="flex_70_container">
                 <header>
-                <img src="lathe.jpg" alt="lathe" />
-                <p>Wood Lathe</p>
+                    <img src="lathe.jpg" alt="lathe" />
+                    <p>Wood Lathe</p>
                 </header>
+                <div class="flex_100">
                 <h1>Sanders</h1> 
                 <p>Are used to smooth and remove all defects in the wood’s surface. 
                     Sandpaper is rate in measurements of grits. The lower the number the 
@@ -71,7 +65,9 @@
                     <li><a href="https://www.lowes.com/search?searchTerm=sander&protectedQuery=true">Sanders at Lowes</a></li>
                     <li><a href="https://www.harborfreight.com/power-tools/grinders-sanders.html?category=2713%2C1856%2C1851%2C1853">Sanders at Harbor Freight</a></li>
                 </ul>
-                
+                </div>
+                <hr />
+                <div class="flex_100">
                 <h1>Chop Saw (or miter saw)</h1>
                 These are used to cut boards down to length and add angles to the ends of boards.
 
@@ -80,7 +76,9 @@
                     <li><a href="https://www.lowes.com/search?searchTerm=chop%20saw&protectedQuery=true">Chop saws at Lowes</a></li>
                     <li><a href="https://www.homedepot.com/s/chop%2520saw?NCNI-5">Chop saws at Home Depot</a></li>
                 </ul>
-                
+                </div>
+                <hr />
+                <div class="flex_100">
                 <h1>Scroll Saw</h1>
                 <p>These saws have small blade that oscillates up and down to cut boards up to 1 inch think.  
                 They are commonly used to cut intricate patterns out of wood.</p>  
@@ -90,7 +88,9 @@
                     <li><a href="https://www.homedepot.com/b/Tools-Power-Tools-Saws-Scroll-Saws/N-5yc1vZc67a?NCNI-5&searchRedirect=scroll">Scroll saws at Home Depot</a></li>
                     <li><a href="https://www.harborfreight.com/search?q=scroll%20saw">Scroll saws at Harbor Freight</a></li>
                 </ul>
-                
+                </div>
+                <hr />
+                <div class="flex_100">
                 <h1>Table Saws & Bandsaws</h1>
                 <p>Both saws are used to split boards longwise but here are their differences:</p>
                 <ul>
@@ -104,7 +104,9 @@
                     <li><a href="https://www.lowes.com/search?searchTerm=band%20saw&protectedQuery=true">Band saws at Lowes</a></li> 
                     <li><a href="https://www.homedepot.com/s/band%2520saw?NCNI-5">Band saws at Home Depot</a></li>
                 </ul>
-                
+                </div>
+                <hr />
+                <div class="flex_100">
                 <h1>Lathe</h1>
                 <p>Lathes are used to spin wood and make things like pens and vases.</p> 
 
@@ -113,19 +115,22 @@
                     <li><a href="https://www.lowes.com/search?searchTerm=lathe&protectedQuery=true">Lathes at Lowes</a></li>
                     <li><a href="https://www.homedepot.com/s/lathe?NCNI-5">Lathes at Home Depot</a></li>
                 </ul>
-            </section>
+                </div>
+            </div>
+            <div class="flex_aside">
+                <aside>
+                    <div class="aside_text" id="picking_tools_aside">
+                        <h1>Useful Wood Tools</h1> 
+                        <p><a href="https://woodsmithspirit.com/basic-woodworking-tools/">Basic Woodworking Tools For Beginners</a></p>
+                    </div>
+                    <div class="aside_text">
+                        <h1>Places to Buy Tool</h1>
+                        <p><a href="https://www.homedepot.com/b/Tools-Power-Tools-Woodworking-Tools/N-5yc1vZc2gv">Woodworking tool at Home Depot</a></p>
+                        <p><a href="https://www.amazon.com/woodworking-tools/s?k=woodworking+tools">Woodworking tools at Amazon</a></p>
+                    </div>
+                </aside>
+            </div>
         </div>
-        <aside class="column30" id="picking_tools">
-            <div class="aside_content">
-                <h1>Useful Wood Tools</h1> 
-                <p><a href="https://woodsmithspirit.com/basic-woodworking-tools/">Basic Woodworking Tools For Beginners</a></p>
-            </div>
-            <div class="aside_content">
-                <h1>Places to Buy Tool</h1>
-                <p><a href="https://www.homedepot.com/b/Tools-Power-Tools-Woodworking-Tools/N-5yc1vZc2gv">Woodworking tool at Home Depot</a></p>
-                <p><a href="https://www.amazon.com/woodworking-tools/s?k=woodworking+tools">Woodworking tools at Amazon</a></p>
-            </div>
-        </aside>
     </div>
     <footer id="footer">
         James Coolidge | CIS 155 - Web Development | 2021 &copy;

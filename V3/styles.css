@@ -44,6 +44,12 @@ body h3 {
     font-weight: bold;
 }
 
+/* hr display set to none  */
+
+hr {
+    display: none;
+}
+
 /* base a */
 
 a:link {
@@ -95,13 +101,13 @@ body > header > div > a > img:hover {
 
 /* main body positioning */
 div.main_body {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
     width: 95%;
     display: flex;
     flex-flow: row wrap;
-    
 }
 
 /* section header position */
@@ -112,6 +118,7 @@ div.main_body > header {
 /* navigation bar */
 
 body > header > nav {
+    position: relative;
     background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
 }
 
@@ -194,6 +201,16 @@ body > header > nav > div > ul > li#current_page a {
     filter: drop-shadow(0px -2px 5px hsla(1, 100%, 1%, 0.5)); 
 }
 
+/* white line below nav bar */
+
+div.nav_line {
+    position: absolute;
+    background-color: blue;
+    height: 3.8em; 
+    width: 100%;
+    background: #F5F4F4;
+}
+
 /* hero image */
 div.main_body > header > img {
     margin-top: 2px;
@@ -232,6 +249,24 @@ div#on_image_text ul li {
     text-shadow: black 2px 2px 4px;
 }
     
+/* figure elemant for about page */
+
+figure {
+    display: flex;
+    flex:1 1 170px;
+    padding: 3%;
+}
+
+figure img {
+    width: 100%;
+}
+
+/* altering text for about page image description*/
+
+span.phone_text {
+    display: none;
+}
+
 /* flex positioning on page */
 
 div.flex_container {
@@ -240,15 +275,90 @@ div.flex_container {
     width: 100%;
 }
 
+/* home page flex */
+
 div.flex_box_left {
     padding-right: 2%;
     flex: 2 1 320px;
-    padding-bottom: 0em;
+    padding-bottom: 5em;
 }
 
 div.flex_aside {
     flex: 1 1 10px;
     min-width: 290px;
+    background-color: #9F8A73;
+}
+
+div.flex_aside#aside_disappear {
+    min-width: 1px;
+}
+/* choosing woods section spacing */
+
+div.flex_70_container section, div.flex_70_container section header {
+    margin-bottom: 5%;
+}
+
+div.flex_100 {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    flex: 1 1 500px;
+}
+
+div.flex_100:last-of-type {
+    margin-bottom: 3em;
+}
+
+/* choosing woods page flex */
+
+header {
+    width: 100%;
+}
+
+div.flex_70_container header > img {
+    width: 100%;
+}
+
+div.flex_70_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 470px;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+div.flex_70_container h1 {
+    margin-top: 0px;
+}
+
+div.flex_70 {
+    flex: 1 1 400px;
+    padding-bottom: 7%;
+    padding-top: 4%;
+    align-self: center;
+}
+
+div.flex_30 {
+    position: relative;
+    flex-basis: 210px;
+    align-self: center;
+}
+
+/* choosing woods page image styles */
+
+div.flex_30 img {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    border: 2px solid #6A4D13;
+    margin: 2%;
+}
+
+div.flex_30 img ~ p {
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    padding: 2%;
 }
 
 /* aside element */
@@ -259,12 +369,11 @@ div.main_body > header {
 aside {
     background-color: #9F8A73;
     color: #F5F4F4;
-    height: 421px;
-    padding: 7% 3% 3%;
 }
 
 div.aside_text {
     padding: 3% 3% 20% 3%;
+    margin: 7% 3% 3%;
     background-color:#82704C;
     border-radius: 5%;
 }
@@ -278,6 +387,34 @@ div.aside_text p {
     text-align: left;
     padding-left: 5%;
     padding-bottom: 3.5%;
+}
+
+/* aside positioning for choosing woods page */
+div#choosing_woods_aside {
+    margin-top: 215%;
+}
+
+div#picking_tools_aside {
+    margin-top: 208%;
+}
+
+/* return to top link on choosing woods page */
+p#return {
+    text-align: center;
+}
+
+p#return a {
+    color:#363636;
+    text-decoration: none;
+    text-shadow: 3px 3px 5px grey;
+}
+
+p#return a:hover::before {
+    content: "[ ";
+}
+
+p#return a:hover::after {
+    content: " ]";
 }
 
 /* footer */
@@ -301,8 +438,7 @@ footer {
 
     /* flex_box_left padding right removed */
     div.flex_box_left {
-        padding-right: 5px;
-        padding-left: 5px;
+        padding: 0px 5px 5%;
         margin-right: 0px;
     }
 
@@ -337,7 +473,6 @@ footer {
     }
 
     /* Page name displayed of tablet and phone */
-
     body > header > nav > div > p::before {
         content: attr(id);
         line-height: 0px;
@@ -375,23 +510,49 @@ footer {
         background-color: #6A4D13;
     }
 
-    aside {
-        display: flex;
-        margin-bottom: 10px;
-        height: 250px;
+    /* figure elemant bottom padding changed */
+
+    figure {
+        flex:1 1 300px;
         align-content: center;
         justify-content: center;
-        padding-top: 0px;
-        margin-top: 5%;
     }
 
-    div.aside_text {
+    figure img {
+        width: 85%;
+    }
+
+    div#about_flex {
+        flex: 1 1 400px;  
+    }
+
+    /* aside removed for beginner tips and about page */
+
+    div#aside_disappear {
+        display: none;   
+    }
+
+    /* aside modification for tablet and phone */
+
+    div.aside_text, div.aside_text#choosing_woods_aside, 
+    div.aside_text#picking_tools_aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: transparent;
+        margin: 0px;
+        padding-bottom: 5%;
+    }
+
+    div.aside_text:nth-of-type(2) {
+        margin-top: -35px;
     }
 
     div.aside_text p {
         text-align: center;
         padding: 7px 0px;
+        align-content: center;
+        justify-content: center;
     }
 
     div.aside_text h1 {
@@ -408,16 +569,36 @@ footer {
         color: white;
         box-shadow: black 1px 2px 5px,
                     black 1px 1px 5px;
-
     }
+
+    /* choosing woods page modification */
+
+    div.flex_70_container {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+
+    div.nav_line {
+        display: none;
+    }
+
+    /* flex container flex dircetion set to column */
 
     div.flex_container {
         flex-direction: column;
     }
 
+    /* Added footer top margin */
+    footer {
+        margin-top: 5%;
+    }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
+
+    h1, h2 {
+        line-height: 1.5em;
+    }
 
     /* desktop hero image removed */
     div.main_body > header > img[alt~="desktop"] {
@@ -427,22 +608,43 @@ footer {
     /* phone hero image displayed */
     div.main_body > header > img[alt~="phone"] {
         display: flex;
+        flex: 1 1 200px;
     }
 
-    div.main_body > header {
-        margin-bottom: 0px;
+    /* choosing woods page styles */
+
+    hr {
+        height: 3px;
+        color: transparent;
+        border: none;
+        background: linear-gradient(to right, #F5F4F4 3%, gray 18%, gray 82%, #F5F4F4 97%);
     }
 
-    div#on_image_text h2, div#on_image_text ul li {
-        color: white;
-        text-shadow: black 2px 2px 4px;
+    div.flex_70 {
+        flex: 1 1 100px;
     }
 
-    div#on_image_text {
-        background: linear-gradient(to right, hsla(1, 1%, 1%, 0.5) 30%, hsla(1, 1%, 1%, 0.1) 80%);
+    div.flex_70_container > hr {
+        display: flex;
+        flex-basis: 100%;
     }
 
-    h2 {
-        background-color: hsl;
+    /* about page figure element */
+    div#about_flex {
+        flex: 1 1 550px;
+    }
+
+    figure {
+        flex: 1 1 180px;
+        padding: 1.5%;
+    }
+
+    /* altering text for about page image description*/
+    span.desktop_text {
+        display: none;
+    }
+
+    span.phone_text {
+        display: initial;
     }
 }
