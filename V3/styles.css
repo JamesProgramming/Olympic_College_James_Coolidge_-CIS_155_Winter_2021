@@ -544,12 +544,6 @@ footer {
         padding-bottom: 5%;
     }
 
-    aside {
-        display: flex;
-        margin-bottom: 10px;
-        height: 250px;
-    }
-    
     div.aside_text:nth-of-type(2) {
         margin-top: -35px;
     }
