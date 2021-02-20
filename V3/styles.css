@@ -290,10 +290,18 @@ div.flex_aside {
     order: 2;
 }
 
+/* aside element on beginner tips and about page min-width lower */
+
 div.flex_aside#aside_disappear {
     min-width: 1px;
 }
-/* choosing woods section spacing */
+
+/* M5LO5 - The styles below demonstrate the use of flexboxes on a web page.
+            Flex boxes are place on the page inside a flex container.
+            The flex boxes start at width specified and to the width
+            of the container or until it reaches another flex box.*/ 
+
+/* flex boxes */
 
 div.flex_70_container section, div.flex_70_container section header {
     margin-bottom: 5%;
@@ -309,16 +317,13 @@ div.flex_100:last-of-type {
     margin-bottom: 3em;
 }
 
-/* choosing woods page flex */
-
-header {
-    width: 100%;
-}
-
 div.flex_70_container header > img {
     width: 100%;
 }
 
+/* M5LO7 - This demonstrates use of properties of flexbox containers.
+            The flex-direction style lines the flex boxes in rows. */
+            
 div.flex_70_container {
     display: flex;
     flex-direction: row;
@@ -337,13 +342,21 @@ div.flex_70 {
     flex: 1 1 400px;
     padding-bottom: 7%;
     padding-top: 4%;
-    align-self: center;
 }
+
+/* M5LO6 - This demonstrates use of properties of flexbox items.
+            The align-self style positions the flex container centered
+            with the adjacent flex box. */
 
 div.flex_30 {
     position: relative;
     flex-basis: 210px;
     align-self: center;
+}
+
+/* header width set to 100% */
+header {
+    width: 100%;
 }
 
 /* choosing woods page image styles */
@@ -364,7 +377,9 @@ div.flex_30 img ~ p {
 }
 
 /* web table */
-
+/* M6LO7 - This demonstrates how to format a table with CSS.
+         The styles below change the background colors, the border-collapse,
+         aligns the content within cells, and applies cell padding. */
 table.versions {
     border-collapse: collapse;
     width: 95%;
@@ -378,7 +393,7 @@ thead tr:first-of-type th {
     font-style: italic;
     font-weight: bold;
     text-align: left;
-    font-size: 1.8em;
+    font-size: 1.7em;
     border: none;
 }
 
@@ -417,6 +432,10 @@ tbody > tr > td > h2 {
     font-size: 1em;
 }
 
+tbody > tr > td > ul {
+    text-shadow: none;
+}
+
 tbody ul {
     list-style-type: " - ";
     list-style-position: inside;
@@ -427,6 +446,7 @@ td {
     background-color: #EBDFD7;
     border-left: 2px solid white;
     border-top: 2px solid white;
+    border-bottom: 2px solid white;
     padding: 1.5%;
     vertical-align: top;
 }
@@ -576,6 +596,10 @@ footer {
         border-radius: 7px;
     }
 
+    /* M5LO4 - This illustrates the use of CSS to create a pull-down.
+                When shrunk below 1000px a hamburger shape displays on the
+                nav bar. When the hamburger shape is selected, a vertical navigation
+                displays below.*/
     div#hamburger:hover+ul, nav > div > ul:hover {
         display: block;
         position: absolute;
@@ -670,7 +694,10 @@ footer {
         margin-top: 5%;
     }
 }
-
+/* M5LO3 - This shows the use of media queries to format a page differently for phones 
+            This media query take effect when the screen is 750px or less, and changes the index page 
+            hero image to the image designed for the phone. This in done by turning the display of the
+            decktop hero image display to none and the phone image display to initial. */
 @media screen and (max-width: 750px) {
 
     h1, h2 {
