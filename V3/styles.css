@@ -1,10 +1,10 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 /* 
 CIS 155 - Web Development
 Author: James Coolidge
 Date:   2021-02-6
-Project: V2
+Project: V3
 
 CSS Typographic styles for website
 File: styles.html 
@@ -287,6 +287,7 @@ div.flex_aside {
     flex: 1 1 10px;
     min-width: 290px;
     background-color: #9F8A73;
+    order: 2;
 }
 
 div.flex_aside#aside_disappear {
@@ -325,6 +326,7 @@ div.flex_70_container {
     flex: 1 1 470px;
     margin-right: 5%;
     margin-top: 5%;
+    order: 1;
 }
 
 div.flex_70_container h1 {
@@ -419,7 +421,7 @@ p#return a:hover::after {
 
 /* footer */
 footer {
-    display: block;
+   
     padding: 0.5em;
     width: 100%;
     background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
