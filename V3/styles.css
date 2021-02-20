@@ -363,6 +363,79 @@ div.flex_30 img ~ p {
     padding: 2%;
 }
 
+/* web table */
+
+table.versions {
+    border-collapse: collapse;
+    width: 95%;
+    text-shadow: 2px 2px 4px hsla(0, 26%, 49%, 0.5);
+}
+
+thead tr:first-of-type th {
+    background-color: #3A87C2;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.8em;
+    border: none;
+}
+
+th {
+    background-color: #9F8A73;
+    border: 2px solid white;
+    font-family: "Segoe UI", sans-serif; /* font choosen form XD adobe*/
+    font-size: 1.1em;
+    padding: 1.5%;
+}
+
+th:not(:first-of-type) {
+    text-align: left;
+}
+
+th:nth-last-of-type(odd) {
+    border-right: none;
+    border-left: none;
+}
+
+col#first_cols {
+    width: 18%;
+}
+
+tbody > tr > th {
+    vertical-align: top;
+    border-left: none;
+}
+
+tbody > tr:nth-of-type(even) > td {
+    background-color: #EEEBEB;
+}
+
+tbody > tr > td > h2 {
+    margin: 0px;
+    font-size: 1em;
+}
+
+tbody ul {
+    list-style-type: " - ";
+    list-style-position: inside;
+    text-indent: 1.2%;
+}
+
+td {
+    background-color: #EBDFD7;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    padding: 1.5%;
+    vertical-align: top;
+}
+
+tfoot td {
+    background-color: #3A87C2;
+    border: none;
+}
+
 /* aside element */
 div.main_body > header {
     margin-bottom: -12px;
