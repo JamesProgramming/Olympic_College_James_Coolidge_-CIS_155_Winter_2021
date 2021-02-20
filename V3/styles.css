@@ -473,7 +473,7 @@ div.aside_text {
     border-radius: 5%;
 }
 
-div.aside_text h1 {
+div.aside_text h2 {
     font-size: 1.3em;
     text-align: center;
 }
@@ -514,7 +514,6 @@ p#return a:hover::after {
 
 /* footer */
 footer {
-   
     padding: 0.5em;
     width: 100%;
     background: linear-gradient(to right, #998B70, #6A4D13 15%,  #6A4D13 85%, #998B70);
@@ -569,7 +568,7 @@ footer {
 
     /* Page name displayed of tablet and phone */
     body > header > nav > div > p::before {
-        content: attr(id);
+        content: attr(class);
         line-height: 0px;
         color:  #F5F4F4;
         font-size: 27px;
