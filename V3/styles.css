@@ -620,7 +620,11 @@ footer {
         width: 85%;
     }
 
-    div#about_flex {
+    div#about_flex1 {
+        flex: 1 1 400px;  
+    }
+
+    div#about_flex2 {
         flex: 1 1 400px;  
     }
 
@@ -733,7 +737,11 @@ footer {
     }
 
     /* about page figure element */
-    div#about_flex {
+    div#about_flex1 {
+        flex: 1 1 550px;
+    }
+
+    div#about_flex2 {
         flex: 1 1 550px;
     }
 
