@@ -437,7 +437,7 @@ tbody > tr:nth-of-type(even) > td {
     background-color: #EEEBEB;
 }
 
-tbody > tr > td > h2 {
+table.versions tbody > tr > td > h2 {
     margin: 0px;
     font-size: 1em;
 }
