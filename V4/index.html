@@ -1,0 +1,120 @@
+<!DOCTYPE html><!-- M1LO6 - Demonstrates the use of the doctype HTML tag--> 
+<html lang="en">
+<head><!-- M1LO6 - Demonstrates the use of the head tag-->
+    <!-- M1LO6 - Demonstrates the use of HTML comment tag-->
+    <!--
+        CIS 155 - Web Development
+        Author: James Coolidge
+        Date:   2021-02-6
+        Project: V2
+        
+        This is the home page for the website.
+        File: index.html
+    -->
+    <meta charset="utf-8" /><!-- M1LO6 - Demonstrates the use of meta to set the charset to utf-8-->
+    <meta name="keywords" content="woodworking, wood, carpertry" />
+    <title>Home | Witty Woodworkers</title>
+    <link href="styles.css" rel="stylesheet" /><!--M1LO8 This demonstrates the use of external style sheets-->
+    <!-- M2LO4 - This shows the use of embedded styles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body><!-- M1LO6 - Demonstrates the use of the body tag-->
+    <header>
+        <div class="main_body">
+            <a href="index.html"><img src="logo.png" alt="logo" /></a>
+        </div>
+        <nav>
+            <div class="main_body">
+                <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul><!--M1LO13 - This demonstrates the use of site navigation hyperlinks-->
+                    <li id="current_page"><a href="index.html">Home</a></li>
+                    <li><a href="choosing_woods.html">Choosing Woods</a></li>
+                    <li><a href="picking_tools.html">Picking Tools</a></li>
+                    <li><a href="beginner_tips.html">Beginner Tips</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <p class="Home"></p>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main_body">
+        <header>
+                <img src="hero_image.jpg" alt="desktop hero image" />
+                <img src="phone_hero_image.jpg" alt="phone hero image" />
+                <div id="on_image_text">
+                    <h2>Jumpstart to <em style="font-weight: bold;">woodworking...</em></h2>
+                    <ul>
+                        <li>Find the right wood</li>
+                        <li>Get the right tools</li>
+                        <li>Learn a few tips</li>
+                    </ul> 
+                </div>
+        </header>
+        <div class="flex_container">
+            <div class="flex_box_left">   
+                    <h1>Just beginning or interested in <em>woodworking?</em></h1>
+                    <p>Starting a wood project can be daunting but with a touch of help 
+                        and some advice, anyone can do a little woodworking just fine.</p>
+                
+                    <h2><em>Woodworking</em> is a dying trade that awaits your arrival.</h2>  
+                    <ol><!--M1LO7 - This demonstrates the use of an ordered list-->
+                        <li>It’s a great hobby</li>
+                        <li>It can output wonderful gifts</li>
+                        <li>It lets you do your own repairs and remodels, saving you great sums of money.</li>  
+                    </ol>
+            </div>           
+            <div class="flex_aside">
+                <aside>
+                    <div class="aside_text">
+                        <h2>Websites with DIY Projects</h2>
+                        <!--M1LO13 - This demonstrates the use of external hyperlinks-->
+                        <p><a href="https://www.homedit.com/wood-projects/">46 DIY Wood Projects For  Beginners</a></p>
+                        <p><a href="https://www.familyhandyman.com/list/woodworking-gifts-beginners-can-make/">21 Woodworking Gifts Beginners Can Make</a></p>
+                    </div>
+                    <div class="aside_text">
+                        <input name="form" id="subscribe" value="yes" type="radio"/>
+                        <div class="form">
+                            <form id="subscribe_form">
+                                <legend>Subscribe</legend>
+                                <hr />
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" placeholder="John" pattern="^([A-Za-z]{1,50})( [A-Za-z]{1,50})?$" />
+                            
+                                <label for="name">Last Name</label>
+                                <input type="text" id="name" placeholder="Smith" pattern="^([A-Za-z]{1,50})( [A-Za-z]{1,50})?$"/>
+                            
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="johnsmith@example.com"/>
+                            
+                                <label for="name">What Your Experience Level ?</label>
+                                <select type="text" id="name">
+                                    <div id="down_arrow">&#11206;</div>
+                                    <option value="top">Expert</option>
+                                    <option value="middle">Intermediate</option>
+                                    <option value="beginner">Beginner</option>
+                                    <option value="beginner">None</option>
+                                </select>
+                            
+                                <button type="submit">Join</button>
+                            </form>
+                            <div class="form_button"></div>
+                            <div class="form_button"></div> 
+                            <div class="form_button"></div>
+                        </div>
+                        <input name="form" id="subscribe_close" value="no" type="radio"/> 
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <footer>
+        James Coolidge | CIS 155 - Web Development | 2021 &copy;
+    </footer>
+
+</body>
+</html>
