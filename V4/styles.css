@@ -503,22 +503,36 @@ div#picking_tools_aside {
 
 /* form on home page */
 
+div.form_container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+}
+
 div.form {
     display: none;
 }
 
 div input#subscribe {
-    height: 50px;
-    width: 100px;
-    opacity: 0.5;
+    position: absolute;
+    width: 50%;
+    height: 59px;
+    opacity: 0;
+    margin-top: 5%;
+    z-index: 0;
 }
 
-div input#subscribe:checked+div {
+div input#subscribe:hover+p {
+    background-color: #6A4D13;
+}
+
+div input#subscribe:checked~div {
     display: block;
     color: white;
     font: 1.1em "Segoe UI", sans-serif;
     font-weight: lighter;
-    text-shadow: 2px 2px 5px rgb(0, 0, 0); /* made with visual color selector*/
+    text-shadow: 2px 2px 5px rgb(0, 0, 0); /* made with visual studio color selector*/
     position: fixed;
     top: 0%;
     right: 0%;
@@ -527,6 +541,17 @@ div input#subscribe:checked+div {
     background: linear-gradient(to bottom, rgba(126, 103, 78, 0.97), rgba(74, 61, 46, 0.97), rgba(69, 57, 43, 0.97));/* made with visual color selector*/
 }
 
+p#subscribe_button {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+    width: 50%;
+    background-color:#82704C;
+    margin: 5%;
+}
+
+/* form on home page - close form button */
 div input#subscribe_close {
     position: fixed;
     top: 5%;
@@ -537,6 +562,7 @@ div input#subscribe_close {
     z-index: 1;
 }
 
+/* form on home page - creating the x symbol for the close button*/
 div.form_button {
     position: fixed;
     top: 5%;
@@ -546,11 +572,7 @@ div.form_button {
     background-color: white;
     transform: rotate(45deg) translateY(12px) translateX(18px);
     border-radius: 20px;
-    filter: drop-shadow(black 0px 0px 10px);
-}
-
-div.form_button:hover {
-    background-color: black;
+    filter: drop-shadow(0px 0px 10px black);
 }
 
 div.form_button:nth-last-of-type(2) {
@@ -564,12 +586,13 @@ div.form_button:last-of-type {
     z-index: -1;
 }
 
+/* form on home page - form positioning and size*/
+
 form#subscribe_form {
     width: 570px;
     margin: auto;
     margin-top: 5.5%;
 }
-
 
 form hr {
     display: block;
@@ -580,7 +603,8 @@ form hr {
     height: 1px;
 }
 
-form legend {
+/* form on home page - label sizes */
+form label:first-of-type {
     font-size: 2.7em;
 }
 
@@ -588,13 +612,17 @@ form label {
     font-size: 1.2em;
 }
 
+/* form on home page - input, select, and button styling*/
+/* M7LO11 - This demonstrates how to format a form with CSS.
+    This styles below turn the border colors white, rounds the box's corners, and
+    places a shadow on the text inside the input types. */ 
 form input, form select, button {
     width: 100%;
     height: 47px;
     font-family: "Segoe UI", sans-serif;
     font-weight: lighter;
     font-size: 0.89em;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* made with visual color selector*/
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* made with visual studio color selector*/
     border-radius: 10px;
     border-style: solid;
     border-color: white;
@@ -602,6 +630,12 @@ form input, form select, button {
     padding-left: 2%;
 }
 
+form input {
+    transition: transform 0.5s ease-in-out;
+}
+/* M8LO10 - This demonstrates a CSS transition.
+            When the button is hovered, It's background turns to a light brown over a period of 0.5 seconds. It does
+            this transition slow at the start, faster in the middle, and slower towards the end. */
 form button {
     display: block;
     margin: auto;
@@ -610,28 +644,15 @@ form button {
     font-weight: normal;
     padding: 0px;
     margin-top: 10px;
+    transition: background-color 0.5s ease-in-out;
 }
 
 form button:hover {
     background-color: #9F8A73;
-    animation: submit_button 0.5s ease-out;
-}
-
-@keyframes submit_button {
-    from {background-color: white}
-    to {background-color: #9F8A73}
-}
-
-@keyframes input_width {
-    from {transform: scale(1); background-color: white;}
-    to {transform: scale(1.1); background-color: rgb(240, 240, 240);}
 }
 
 form input:focus {
     transform: scale(1.1);
-    animation-name: input_width;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
     background-color: rgb(240, 240, 240);
 }
 
